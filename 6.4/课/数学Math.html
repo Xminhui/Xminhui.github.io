@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        console.log(Math.max(1,2,3,1,15,1,23,15,25));
+    </script> -->
+    <script>
+        //案例
+        //console.log(Math.PI);
+        // function gtearrc (r) {
+        //     let re1 = Math.PI * Math.pow(r, 2)
+        //     return Math.floor(re1 * 100) / 100
+        // }
+        // let re = gtearrc(1123)
+        // document.write(re)
+
+        //console.log(Math.random());
+        //console.log(Math.random() * 10);
+        // console.log(Math.floor(Math.random() * (10 + 1)));
+        // function gtearrc (n) {
+        //     return Math.floor(Math.random() * (n +1))
+        // }
+        // let random = gtearrc(10)
+        // document.write(random)
+
+        let arr = ['吴俊锋','罗大炮','覃干峰','为辐导','覃蚝']
+        setInterval(function () {
+            let random = Math.floor (Math.random() * arr.length)
+            document.write(`${arr[random]}炮灰出列!<br>`)
+        },100)
+    </script>
+</body>
+</html>
