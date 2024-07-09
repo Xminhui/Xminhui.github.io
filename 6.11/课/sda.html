@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 400px;
+            margin: 80px auto;
+        }
+        input {
+            display: block;
+            margin-bottom: 20px;
+            width: 300px;
+            height: 40px;
+            padding-left: 10px;
+        }
+        .loginBtn {
+            height: 40px;
+            background-color: #ff6700;
+            color: #fff;
+            line-height: 40px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 7px;
+        }
+    </style>
+        
+
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="用户名">
+        <input type="password" placeholder="密码">
+        <button type="button">点击切换</button>
+        <input type="text" placeholder="验证码" class="codeInp">
+        <a href="javascript:;" class="codeLink">获取超链接</a>
+        <div class="loginBtn">登陆</div>
+    </form>
+    <script>
+        // 表单属性
+        const userInp = document.querySelector('input[type="text"]')
+        const pwdInp = document.querySelector('input[type="password"]')
+        // 表单.value 文本框/密码框的内容，通常结合JS事件获取
+        const btn = document.querySelector('button')
+        btn.onclick = function(){
+            console.log(userInp.value);
+            pwdInp.type = 'text' // 当点击按钮时， 密码框转换成文本框，密码可以显示
+        }
+        // type属性 表单.type 可以修改表单的type类型
+        let flag = true
+        btn.onclick = function () {
+            if (flag) {
+                pwdInp.type = 'text'
+                flag = false
+            } else {
+                pwdInp.type = 'password'
+                flag = true
+            }
+        }
+        const loginBtn = document.querySelector('.loginBtn')
+        loginBtn.onclick = function() {
+            if (userInp.value === 'admin' && pwdInp.value === 'a12345' && codeInp.value === code) {
+                alert('登陆成功')
+                userInp.value = ''
+                pwdInp.value = ''
+                codeInp.value = ''
+            } else {
+                alert('错误')
+                userInp.value = ''
+                pwdInp.value = ''
+                codeInp.value = ''
+            }
+        }
+        const codeInp =  document.querySelector('input.codeInp')
+        const codeLink = document.querySelector('.codeLink')
+        let code
+        function getRandomCode () {
+            let code = ''
+            for (let i = 1 ;i <= 4; i++) {
+                let random = Math.floor(Math.random() * 10)
+                code += random
+            }
+            return code
+        }
+        codeLink.onclick = function() {
+            code = getRandomCode()
+            alert(`验证码为${code}`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+         .cd {
+            width: 320px;
+            height: 360px;
+            background-color: rgb(252, 198, 198);
+            margin: 80px auto;
+            text-align: center;
+            padding: 40px 10px 0;
+            border-radius: 15px;
+         }
+         .time {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+         }
+         .time div {
+            width: 90px;
+            height: 70px;
+            background-color: #333;
+            align-items: center;
+            color: aliceblue;
+            text-align: center;
+            line-height: 70px;
+            font-size: 2.5em;
+            font-weight: bold;
+            border-radius: 10px;
+         }
+         .time span {
+            line-height: 70px;
+
+            font-size: 3em;
+         }
+         p {
+           font-size: 2em;
+           font-weight: bold; 
+         }
+    </style>
+</head>
+<body>
+    <div class="cd">
+        <div class="title">
+            <img src="../图/456/title.png" alt="">
+        </div>
+        <div class="clock">
+            <img src="../图/456/clock.png" alt="">
+        </div>
+        <p>11:30场</p>
+        <div class="time">
+            <div class="huon">00</div>
+            <span>:</span>
+            <div class="min">00</div>
+            <span>:</span>
+            <div class="sec">00</div>
+        </div>
+    </div>
+    <script>
+        const huon = document.querySelector('.huon')
+        const min = document.querySelector('.min')
+        const sec = document.querySelector('.sec')
+        function gtearrtime(t) {
+            let h = parseInt(t / 60 / 60 % 24)
+            let m = parseInt(t / 60 % 60)
+            let s = parseInt(t % 60)
+            h = h >= 10 ? h : '0' + h
+            m = m >= 10 ? m : '0' + m
+            s = s >= 10 ? s : '0' + s
+            return [h, m, s]
+        }
+         
+         let yiyi = setInterval(function () { 
+            let now = +new Date()
+            let timing = +new Date('2024-6-12 11:30:00')
+            let s = (timing - now) / 1000
+            let re = gtearrtime(s)
+            console.log(re);
+            huon.innerHTML = re[0]
+            min.innerHTML = re[1]
+            sec.innerHTML = re[2]
+            if () {
+                
+            }
+         },1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"></input>
+    <script>
+        const inp = document.querySelector('input')
+        inp.addEventListener('focus', function () {
+            inp.style.outlineColor = '#ff6700'
+        })
+
+        // inp.addEventListener('blur',function () {
+        //     alert(`请你输入文本框内容`)
+        // })
+            inp.addEventListener('keydown', function () {
+                console.log('');
+            })
+            inp.addEventListener('keyup', function (e) {
+                console.log(e.key);
+            })
+            inp.addEventListener('input', function () {
+                console.log(inp.value);
+            })
+    </script>
+</body>
+</html>

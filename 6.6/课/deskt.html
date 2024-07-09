@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(../图/desktop/desktop_1.jpg);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function gearrndom(a,b) {
+            return Math.floor(Math.random() * (b - a + 1)) + a
+        }
+        let random = gearrndom(1,10)
+        document.body.style.backgroundImage = `url(../图/desktop/desktop_${random}.jpg)`
+        setInterval(function() {
+            let random = gearrndom(1,10)
+        document.body.style.backgroundImage = `url(../图/desktop/desktop_${random}.jpg)`
+        },100)
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 400px;
+            margin: 80px auto;
+
+        }
+        input {
+            display: block;
+            margin-bottom: 20px;
+            width: 300px;
+            height: 40px;
+            padding-left: 10px;
+        }
+        .liby {
+            height: 50px;
+            background-color: #ff6700;
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+            cursor: pointer;
+            line-height: 50px;
+            border-radius: 7px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="用户名">
+        <input type="password" placeholder="密码">
+        <button type="button">切换</button>
+        <input type="text" class="zxcdinp" placeholder="验证码">
+        <a href="javascript:" class="zxcdlik">获取验证码</a>
+        <div class="liby">登录</div>
+    </form>
+    <script>
+        //表单属性
+        const userInp = document.querySelector('input[type="text"]')
+        const pwdInp = document.querySelector('input[type="password"]')
+        const btn = document.querySelector('button')
+        btn.onclick = function () {
+            console.log(userInp.value);
+            pwdInp.type = 'text'
+        }
+        //type属性
+        let flag = true
+        btn.onclick = function () {
+            if (flag) {
+                pwdInp.type = 'text'
+                flag = false
+            } else {
+                pwdInp.type = 'password'
+                flag = true
+            }
+        }
+        const liby = document.querySelector('.liby')
+        liby.onclick = function () {
+            if (userInp.value === 'admin' && pwdInp.value === 'a123456' && zxcdinp.value === zxcd) {
+                alert('欢迎登陆')
+                userInp.value = ''
+                pwdInp.value = ''
+                zxcdinp.value = ''
+            } else {
+                alert('你的用户名或密码有误，请重新输入！！！')
+                userInp.value = ''
+                pwdInp.value = ''
+                zxcdinp.value = ''
+            }
+        }
+        const zxcdinp = document.querySelector('input.zxcdinp')
+        const zxcdlik = document.querySelector('.zxcdlik')
+        let zxcd 
+        function grtarrzxcd() {
+            let zxcd = ''
+            for (let i = 1; i <= 4; i++) {
+                let random = Math.floor(Math.random() * 10)
+                zxcd += random
+            }
+            return zxcd
+        }
+        zxcdlik.onclick = function () {
+            zxcd = grtarrzxcd()
+            alert(`验证码为${zxcd}`)
+        }
+    </script>
+</body>
+</html>

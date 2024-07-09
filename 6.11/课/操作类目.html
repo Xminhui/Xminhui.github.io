@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 20px auto;
+        }
+        .ag {
+            color: aqua;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box盒子</div>
+    <p class="ag">的</p>
+    <script>
+        const box = document.querySelector('.box')
+        box.innerHTML = 'box盒子'
+        box.classList.add('ag')
+        const p = document.querySelector('p')
+        p.classList.remove('ag')
+        p.classList.toggle('box')
+        //box.classList.toggle('box')
+    </script>
+</body>
+</html>

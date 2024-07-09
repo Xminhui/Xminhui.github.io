@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../图/images/dora01.png" alt="">
+    <script>
+        function getarrdom(a,b) {
+            return Math.floor(Math.random() * (b - a + 1)) + a
+        }
+        setInterval(function () {
+            let random = getarrdom(1,9)
+        const pic = document.querySelector('img')
+        pic.src = `../图/images/dora0${random}.png`
+        },200) 
+        
+    </script>
+</body>
+</html>
