@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // let num = +prompt(`请输入一个数字`)
+        // let i = 1 
+        // if ( num >= 1 && num !== NuN) {
+        //     while( i <= num) {
+        //         document.write('青松<br>')
+        //         i++
+        //     }  
+        // } else {
+        //     alert('错误')
+        // }
+
+
+        //(2)
+        // let i = 1
+        // while (i <= 100) {
+        //     document.write(`第${i}天，学了${i}<br>`)
+        //     i++
+        // }
+
+
+        //(3)
+        // let sun = 0
+        // let i = 1
+        // while (i <= 100) {
+        //     sun += i 
+        //     i++
+        // }
+        // console.log(sun);
+
+
+        //(4)(没有完成)
+        // let sum = 0
+        // let i = 1
+        // while ( i % 2 <= 100) {
+        //     if () {
+        //         sum += i 
+        //     }
+            
+        //     i++
+        // }
+        // console.log(sum);
+
+
+        //(5)
+        let x = +prompt('请输入第一个数字')
+        let y = +prompt('请输入第二个数字')
+        let sun = 0
+        if (x < y) {
+            while (x <= y) {
+                sun += x
+                x++
+            }
+        } else if (x > y) {
+            while (x >= y) {
+                sun += y
+                y++
+            }
+        } else {
+            alert('输入有误')
+        }
+        console.log(sun);
+    </script>
+</body>
+</html>

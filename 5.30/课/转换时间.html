@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>
+        
+    </span>
+    <script>
+        let span = document.querySelector(`span`)
+        let sun = +prompt('请输入秒数')
+        function  asdnum(t) {
+            let h = parseInt(t / 60 / 60 % 24)
+            let m = parseInt(t / 60 % 60 )
+            let s = parseInt(t % 60)
+            return `${h}: ${m}: ${s}秒`
+        }
+        // document.write(asdnum(sun))
+        setInterval(function () {
+            // let re = asdnum(sun)
+            // document.write(`距离放假还有${re}<br>`)
+            span.innerHTML = asdnum(sun)
+            sun--
+        }, 1000)
+    </script>
+</body>
+</html>

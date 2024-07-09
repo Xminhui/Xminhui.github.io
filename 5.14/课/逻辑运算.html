@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let son = +prompt('请输入你的分数')
+        console.log(son >= 80 && son < 90);
+        if (son >= 80 && son < 90) {
+            alert('恭喜你')
+        }
+        if (son < 80) {
+            alert('很抱歉')
+        }
+    </script> -->
+    <!-- <script>
+        let son = +prompt('请输入数字')
+        if (son > 10 || son %  6 === 0 || son < -2) {
+            alert('${son}满足以上条件')
+        }
+    </script> -->
+    <!-- 逻辑优先级 -->
+    <button>dian</button>
+    <script>
+        let flag = true
+        const btn = document.querySelector('button')
+        btn.onclick = function () {
+            if (flag) {
+                alert('开关启动时，弹出警示框')
+                flag = !flag
+            } else {
+                console.log('开关关闭时，在控制台出现');
+                flag = !flag
+            }
+        }
+    </script>
+</body>
+</html>

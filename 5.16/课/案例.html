@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = +prompt('请输入一个数字')
+        let num2 = +prompt('请输入两个数字')
+        let op = +prompt(`
+        1.+
+        2.-
+        3.*
+        4./ 
+        5.%
+        `)
+        switch (op) {
+            case 1 :
+                alert(`你现在输入的是加法,${num1 + num2}`)
+                break
+             case 2 :
+                alert(`你现在输入的是加法,${num1 - num2}`)
+                break
+             case 3 :
+                alert(`你现在输入的是加法,${num1 * num2}`)
+                break
+             case 4 :
+                alert(`你现在输入的是加法,${num1 / num2}`)
+                break
+             case 5 :
+            alert(`你现在输入的是加法,${num1 % num2}`)
+                break
+            default:
+                alert('错误')
+        }
+    </script>
+    <!-- <script>
+        let date = new Date()
+        let week = date.getDay()
+        switch (week) {
+            case 1 : 'yi'
+            break
+            case 4 : 'si'
+
+        }
+        document.write(`今天星期${week},v我50`)
+    </script> -->
+</body>
+</html>
